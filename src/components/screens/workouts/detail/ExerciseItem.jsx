@@ -1,0 +1,33 @@
+/* eslint-disable react/prop-types */
+import cn from 'clsx'
+
+import styles from './Workout.module.scss'
+import { useNavigate } from 'react-router-dom'
+
+const ExerciseItem = ({ exerciseLog }) => {
+	const navigate = useNavigate()
+
+	return (
+		<div
+			className={cn(styles.item, {
+				[styles.completed]: exerciseLog.isCompleted
+			})}
+		>
+			<button
+				aria-label='Move to exercise'
+				onClick={() => navigate(`/exercise/${exerciseLog.id}`)}
+			>
+				<span>{exerciseLog?.exercise?.name}</span>
+				<img
+					src={`${import.meta.env.VITE_SERVER_URL}${
+						exerciseLog.exercise.iconPath
+					}`}
+					height='34'
+					draggable={false}
+					alt={exerciseLog.exercise.name}
+				/>
+			</button>
+		</div>
+	)
+}
+export default ExerciseItem

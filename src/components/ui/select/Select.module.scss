@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+
+.selectContainer {
+	position: relative;
+	margin-bottom: 16px;
+
+	> label {
+		display: block;
+		color: black;
+	}
+}

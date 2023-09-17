@@ -1,0 +1,46 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
+
+.wrapper {
+	position: relative;
+	button {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+	.menu {
+		position: absolute;
+		top: calc(100% + 8px);
+		right: 0;
+		background-color: white;
+		padding: 10px 12px;
+		font-size: 16px;
+		box-shadow: $bx-16;
+		border-radius: 10px 0px 10px 10px;
+		min-width: 140px;
+		max-width: 160px;
+		display: none;
+		animation: opacity 0.4s;
+		&.show {
+			display: block;
+		}
+		> ul {
+			color: black;
+			list-style: none;
+			a,
+			.logout {
+				font-size: 16px;
+				font-family: $default-font;
+				color: black;
+				text-decoration: none;
+				transition: color 0.2s ease;
+				&:hover,
+				&.active {
+					color: $accent;
+					margin: 4px 0;
+				}
+			}
+		}
+	}
+}

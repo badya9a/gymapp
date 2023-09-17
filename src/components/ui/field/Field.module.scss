@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables';
+
+.wrapper {
+	margin-bottom: 15px;
+}
+
+.input {
+	border-radius: 6px;
+	color: white;
+	background-color: transparent;
+	display: flex;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 3px solid $accent;
+	padding: 14px;
+	font-size: 18px;
+
+	:focus {
+		outline: none;
+		border-color: rgba($accent, 0.3);
+	}
+
+	&::placeholder {
+		color: white;
+	}
+}
+.error {
+	color: rgba(221, 10, 10, 0.893);
+	font-size: 18px;
+	display: flex;
+	justify-content: start;
+}

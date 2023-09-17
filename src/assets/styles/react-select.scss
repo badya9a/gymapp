@@ -1,0 +1,105 @@
+@import 'src/assets/styles/variables';
+
+/* React Select */
+.custom-select {
+	&__control {
+		min-height: 51px !important;
+		padding: 5px !important;
+		background-color: transparent !important;
+		border: none !important;
+		border-bottom: 3px solid $accent !important;
+		box-shadow: none !important;
+
+		&--menu-is-open {
+			border-color: $accent !important;
+		}
+	}
+
+	&__value-container {
+		padding: 0 !important;
+		cursor: text !important;
+	}
+
+	&__input-container {
+		color: #999aa5 !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	&__indicator {
+		color: white !important;
+		&:last-child {
+			border-left: 1px solid white !important;
+		}
+
+		&:hover {
+			color: #999aa5 !important;
+		}
+	}
+
+	&__multi-value {
+		background-color: rgba($accent, 0.6) !important;
+		border-radius: 0.5rem !important;
+		margin-left: 5px !important;
+		padding: 2px !important;
+	}
+
+	&__multi-value__label {
+		text-transform: capitalize !important;
+		color: rgba(white, 0.7) !important;
+		text-overflow: initial !important;
+	}
+
+	&__multi-value__remove {
+		cursor: pointer !important;
+		color: rgba(white, 0.8) !important;
+
+		&:hover {
+			background-color: transparent !important;
+			color: rgba(white, 1) !important;
+		}
+	}
+
+	&__menu {
+		background-color: $dark-accent !important;
+		color: white !important;
+	}
+
+	&__option {
+		text-transform: capitalize !important;
+		cursor: pointer !important;
+		&--is-focused {
+			background-color: darken($hard-dark-accent, 5%) !important;
+		}
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+			outline: none;
+			transition: all;
+
+			border-color: #ced4da !important;
+			box-shadow: none !important;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: #ced4da !important;
+		}
+
+		.form-control__indicators {
+			cursor: pointer;
+		}
+	}
+}

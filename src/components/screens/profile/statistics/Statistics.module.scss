@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables';
+
+.statistic {
+	.statlist {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+
+		.eachstat {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 27%;
+			font-size: 24px;
+			text-align: center;
+
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+
+			.title {
+				color: $hard-dark-accent;
+				text-transform: capitalize;
+			}
+
+			.number {
+				font-weight: bold;
+				color: white;
+			}
+		}
+	}
+}
