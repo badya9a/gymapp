@@ -9,7 +9,6 @@ export const axiosClassic = axios.create({
 
 export const setAuthToken = token => {
 	if (token) {
-		console.log('[axios] confirm new token update  ===>', token)
 		axiosClassic.defaults.headers.common['Authorization'] = `Bearer ${token}`
 	} else {
 		delete axiosClassic.defaults.headers.common['Authorization']
