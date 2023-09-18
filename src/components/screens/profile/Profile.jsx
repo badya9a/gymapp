@@ -4,7 +4,7 @@ import stylesLayout from '../../layout/Layout.module.scss'
 import cn from 'clsx'
 import Header from '../../layout/header/Header'
 import Loader from '../../ui/loader/Loader'
-import Counter from './statistics/Statistics'
+
 import Statistics from './statistics/Statistics'
 
 const Profile = () => {

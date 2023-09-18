@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { axiosClassic } from '../api/api'
+import { axiosClassic, setAuthToken } from '../api/api'
 import { TOKEN } from '../shared/constants'
 
 class AuthService {
@@ -9,7 +9,10 @@ class AuthService {
 				email,
 				password
 			})
-			if (data.token) Cookies.set(TOKEN, data.token)
+			if (data.token) {
+				Cookies.set(TOKEN, data.token)
+				setAuthToken(data.token)
+			}
 
 			return data
 		} catch (error) {
