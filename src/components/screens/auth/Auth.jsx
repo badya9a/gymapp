@@ -11,7 +11,7 @@ const Auth = () => {
 
 	return (
 		<>
-			<Layout heading='Sign in' bgImage='/images/auth-bg.png' />
+			<Layout heading='Sign in' bgImage='/images/auth-bg.jpg' />
 			<div className='wrapper-inner-page'>
 				{isLoading && <Loader />}
 				<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
